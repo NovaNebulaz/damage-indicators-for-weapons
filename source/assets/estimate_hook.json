@@ -1,0 +1,13 @@
+{
+  "patches": {
+    "control": 71,
+    "convert": 1086,
+    "handler": 1111,
+    "font_copy": 1150,
+    "font_set": 1188
+  },
+  "raw_offset": 16,
+  "vm_offset": 0,
+  "version": 2,
+  "revision": 7
+}

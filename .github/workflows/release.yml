@@ -1,0 +1,50 @@
+name: Windows release
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: windows-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Install build dependencies
+        run: python -m pip install -r requirements-build.txt
+      - name: Test installation and startup
+        run: python -m unittest discover -s tests -v
+      - name: Build launcher
+        run: python source/build.py
+      - name: Package downloads
+        run: python tools/package_release.py
+      - name: Publish release downloads
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REF_TYPE: ${{ github.ref_type }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          $versionText = Get-Content source/version.txt -Raw
+          $match = [regex]::Match($versionText, "StringStruct\('ProductVersion','([0-9]+\.[0-9]+\.[0-9]+)'\)")
+          if (-not $match.Success) { throw 'Product version is missing.' }
+          $releaseTag = 'v' + $match.Groups[1].Value
+          if ($env:REF_TYPE -eq 'tag' -and $env:REF_NAME -ne $releaseTag) { throw 'Tag and product version differ.' }
+          gh release view $releaseTag 2>$null
+          if ($LASTEXITCODE -eq 0) { Write-Output 'This version is already published; existing downloads are unchanged.'; exit 0 }
+          gh release create $releaseTag 'dist/Damage Indicators for weapons.exe' 'dist/Damage Indicators for weapons.zip' 'dist/SHA256.txt' --target $env:GITHUB_SHA --title "Damage Indicators for weapons $releaseTag" --notes-file docs/RELEASE_NOTES.md --latest
+          if ($LASTEXITCODE -ne 0) { throw 'Release publication failed.' }

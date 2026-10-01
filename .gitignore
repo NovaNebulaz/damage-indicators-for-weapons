@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.exe
+*.spec
+.venv/
+build/
+dist/
+release-assets/
+*.log
+adapter-session.json
+previous-adapter-session.json
