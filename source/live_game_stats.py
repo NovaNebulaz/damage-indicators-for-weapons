@@ -18,6 +18,19 @@ class GameReader:
         self.handle = self.k.OpenProcess(0x410, False, pid)
         if not self.handle:
             raise OSError('Could not read the running game.')
+        self.layout = None
+        for layout in (
+            {'objects':0xbea8bf0,'names':0xbdc5040,'balance':0xbb3ea08,'convert':0x3e78e00,'handler':0x6659710,'font_copy':0x17863d0,'font_set':0x36f4720,'state_handler':0x45c32b0},
+            {'objects':0xbf35a70,'names':0xbe51ec0,'balance':0xbbcac28,'convert':0x3e7a500,'handler':0x665c270,'font_copy':0x1787cf0,'font_set':0x36f5d50,'state_handler':0x45c4ae0},
+        ):
+            self.ga=base+layout['objects'];self.pool=base+layout['names']
+            try:
+                if 0<self.u(self.ga+0x24)<2000000 and self.name(0)=='None':
+                    self.layout=layout;break
+            except (OSError,ValueError,UnicodeError):pass
+            self.name.cache_clear()
+        if self.layout is None:
+            self.close();raise ValueError('Unsupported object layout.')
         self.attrs = {}; self.widgets = []; self.curve = None; self.last_scan = 0
 
     def close(self):
@@ -78,7 +91,7 @@ class GameReader:
             try:
                 if self.u(p+8)&0x30: continue # Default objects and templates are never live UI.
                 cl = self.q(p+16); cn = self.object_name(cl)
-                if cn in ('ATR_Damage','ATR_ItemPower'):
+                if cn in ('ATR_Damage','ATR_ItemPower','ATR_MeleeAttack','ATR_RangedAttack'):
                     owner = self.q(p+32)
                     if self.class_name(owner) in ('BP_AlexCharacter_C','BP_SteveCharacter_C'):
                         attrs.setdefault(owner,{})[cn] = (p,cl,self.fields(cl))
@@ -93,7 +106,7 @@ class GameReader:
                     tables.append(p)
             except (OSError, ValueError, UnicodeError, KeyError, struct.error):
                 continue
-        players = [v for v in attrs.values() if set(v)=={'ATR_Damage','ATR_ItemPower'}]
+        players = [v for v in attrs.values() if {'ATR_Damage','ATR_ItemPower'} <= set(v)]
         if len(players)!=1: raise ValueError('Waiting for one local player…')
         self.attrs = players[0]
         self.widgets = [v for v in groups.values() if set(v)=={'PrimaryStatText','PowerText'}]

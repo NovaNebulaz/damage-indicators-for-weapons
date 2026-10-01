@@ -5,6 +5,7 @@ import hashlib,json,os,pathlib,re,shutil,subprocess,sys,time,uuid,winreg
 TITLE='Damage Indicators for weapons'
 APP_ID='1912410'
 EXPECTED='7c83afbf0ad34a40b853cdb25a22fffb605d08e2a1e2d431974d7c7c1ee0ba54'
+SUPPORTED={EXPECTED,'231147bd0c655a4ae73f90873675d42917f2bfb3a9ee164fc64f217d6d6bd4ef'}
 ROOT=pathlib.Path(__file__).resolve().parent
 ASSETS=ROOT/'assets'
 STATE=pathlib.Path(os.environ.get('LOCALAPPDATA',str(pathlib.Path.home()/'AppData/Local')))/'DamageIndicatorsForWeapons'
@@ -139,7 +140,7 @@ def legacy_files(root):
  return result
 
 def verify_build(root):
- if digest(normalize_game(root)/EXE)!=EXPECTED:raise ValueError('This game update is not supported yet. No files were changed.')
+ if digest(normalize_game(root)/EXE) not in (SUPPORTED | {EXPECTED}):raise ValueError('This game update is not supported yet. No files were changed.')
 
 def closed():
  if game():raise ValueError('Close Minecraft Dungeons II, then try again. The game has these mod files loaded.')
@@ -212,7 +213,7 @@ def enable_estimates():
  from inventory_estimates import install,start_updater
  active=game()
  if not active:raise ValueError('The game is not running yet.')
- if digest(active['path'])!=EXPECTED:raise ValueError('This game update is not supported yet.')
+ if digest(active['path']) not in (SUPPORTED | {EXPECTED}):raise ValueError('This game update is not supported yet.')
  STATE.mkdir(parents=True,exist_ok=True)
  result=install(active);start_updater();return result
 

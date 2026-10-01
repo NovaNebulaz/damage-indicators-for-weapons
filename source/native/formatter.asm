@@ -208,6 +208,15 @@ volley:
  mov eax,[r14+40]
  call append_number
 footnote:
+ cmp dword ptr [r14+44],0
+ je speed_done
+ lea rsi,[rip+speed_label]
+ call append_text
+ mov eax,[r14+44]
+ call append_number
+ lea rsi,[rip+speed_suffix]
+ call append_text
+speed_done:
  lea rsi,[rip+neutral_label]
  call append_text
 render:
@@ -316,6 +325,10 @@ full_charged_label:
  .byte 10,0,70,0,117,0,108,0,108,0,32,0,72,0,80,0,32,0,99,0,104,0,97,0,114,0,103,0,101,0,100,0,32,0,0,0
 projectile_label:
  .byte 10,0,80,0,101,0,114,0,32,0,112,0,114,0,111,0,106,0,101,0,99,0,116,0,105,0,108,0,101,0,59,0,32,0,99,0,111,0,117,0,110,0,116,0,32,0,0,0
+speed_label:
+ .byte 10,0,83,0,112,0,101,0,101,0,100,0,58,0,32,0,0,0
+speed_suffix:
+ .byte 47,0,49,0,48,0,0,0
 neutral_label:
  .byte 10,0,67,0,117,0,114,0,114,0,101,0,110,0,116,0,32,0,98,0,111,0,111,0,115,0,116,0,115,0,59,0,32,0,110,0,101,0,117,0,116,0,114,0,97,0,108,0,32,0,116,0,97,0,114,0,103,0,101,0,116,0,0,0
  .align 8

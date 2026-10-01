@@ -1,0 +1,1185 @@
+{
+  "AM_Player_GreatAxeCombo_Unique1": {
+    "seconds": 2.4096500873565674,
+    "rate": 1.0,
+    "hits": 2,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.3600902557373047,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.0495598316192627,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_GlaiveCombo_Unique1": {
+    "seconds": 3.1502833366394043,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.0260908603668213,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.1241967678070068,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 0.9999957084655762,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_PickAxeCombo_Unique1": {
+    "seconds": 2.831683397293091,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7818166613578796,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.716533362865448,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.3333333730697632,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_AxeCombo": {
+    "seconds": 2.6165332794189453,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.8333336710929871,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.7165327668190002,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.066666841506958,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_MaceCombo_Unique1": {
+    "seconds": 2.831683397293091,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7818166613578796,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.716533362865448,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.3333333730697632,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_PikeCombo": {
+    "seconds": 3.5037667751312256,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.0992755889892578,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.1033167839050293,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.3011744022369385,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_GiantClubCombo_Unique1": {
+    "seconds": 1.3166667222976685,
+    "rate": 1.0,
+    "hits": 1,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.3166667222976685,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_RapierCombo": {
+    "seconds": 4.766666889190674,
+    "rate": 1.0,
+    "hits": 7,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.4666666984558105,
+        "hits": 3
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.566666603088379,
+        "hits": 3
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.7333335876464844,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_CurvedLongswordCombo_Unique1": {
+    "seconds": 4.042150020599365,
+    "rate": 1.0,
+    "hits": 4,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.1229709386825562,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.2495859861373901,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.669593095779419,
+        "hits": 2
+      }
+    ]
+  },
+  "AM_Player_ClawsCombo_Unique1": {
+    "seconds": 4.566649913787842,
+    "rate": 1.0,
+    "hits": 6,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.1612474918365479,
+        "hits": 2
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.4720861911773682,
+        "hits": 2
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.9333162307739258,
+        "hits": 2
+      }
+    ]
+  },
+  "AM_Player_ClaymoreCombo": {
+    "seconds": 3.447849988937378,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.9433333277702332,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.0818052887916565,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.4227113723754883,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_PickAxeCombo": {
+    "seconds": 2.831683397293091,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7818166613578796,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.716533362865448,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.3333333730697632,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_PikeCombo_Unique1": {
+    "seconds": 3.5072999000549316,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.0992755889892578,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.1033167839050293,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.3047075271606445,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_GreatswordCombo": {
+    "seconds": 1.6909500360488892,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack2",
+        "seconds": 1.6909500360488892,
+        "hits": 3
+      }
+    ]
+  },
+  "AM_Player_MoonSwordCombo_Unique1": {
+    "seconds": 2.4131834506988525,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7818166613578796,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.716533362865448,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 0.9148334264755249,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_SabreCombo": {
+    "seconds": 2.4937334060668945,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7818166613578796,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.716533362865448,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 0.9953833818435669,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_CurvedGreatswordCombo_Unique": {
+    "seconds": 3.460733413696289,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.010769009590149,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.0385249853134155,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.4114394187927246,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_CleaverCombo_Unique1": {
+    "seconds": 2.4089667797088623,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7564042806625366,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.6525651216506958,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 0.9999973773956299,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_ScytheCombo": {
+    "seconds": 3.496983289718628,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.073304295539856,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.1807397603988647,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.2429392337799072,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_HammerCombo": {
+    "seconds": 2.6716833114624023,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7818166613578796,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.716533362865448,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.1733332872390747,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_HammerCombo_Unique1": {
+    "seconds": 2.6716833114624023,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7818166613578796,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.716533362865448,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.1733332872390747,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_SicklesCombo_Unique1": {
+    "seconds": 4.002683162689209,
+    "rate": 1.0,
+    "hits": 6,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.2030022144317627,
+        "hits": 2
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.3977510929107666,
+        "hits": 2
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.4019298553466797,
+        "hits": 2
+      }
+    ]
+  },
+  "AM_Player_BattlestaffCombo": {
+    "seconds": 3.9666666984558105,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.1666667461395264,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.2999999523162842,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.5,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_GiantMalletCombo": {
+    "seconds": 2.4666666984558105,
+    "rate": 1.2000000476837158,
+    "hits": 2,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.9000000357627869,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.5666666626930237,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_CurvedLongswordCombo": {
+    "seconds": 4.039633274078369,
+    "rate": 1.0,
+    "hits": 4,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.1194838285446167,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.2422865629196167,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.6778628826141357,
+        "hits": 2
+      }
+    ]
+  },
+  "AM_Player_ShortSpearCombo": {
+    "seconds": 2.5199999809265137,
+    "rate": 1.0,
+    "hits": 4,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.8533333539962769,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.6666666269302368,
+        "hits": 3
+      }
+    ]
+  },
+  "AM_Player_SwordCombo_Unique1": {
+    "seconds": 2.5244333744049072,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7818166613578796,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.716533362865448,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.0260833501815796,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_DaggerCombo_Unique1": {
+    "seconds": 0.8098000288009644,
+    "rate": 1.0,
+    "hits": 1,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.8098000288009644,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_StraightSwordCombo": {
+    "seconds": 4.233333110809326,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.1333333253860474,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.368792176246643,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.7312076091766357,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_GiantMalletCombo_Unique1": {
+    "seconds": 2.4666666984558105,
+    "rate": 1.2000000476837158,
+    "hits": 2,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.9000000357627869,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.5666666626930237,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_SicklesCombo": {
+    "seconds": 4.002683162689209,
+    "rate": 1.0,
+    "hits": 6,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.2030022144317627,
+        "hits": 2
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.3977510929107666,
+        "hits": 2
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.4019298553466797,
+        "hits": 2
+      }
+    ]
+  },
+  "AM_Player_GreatAxeCombo": {
+    "seconds": 2.4096500873565674,
+    "rate": 1.0,
+    "hits": 2,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.3600902557373047,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.0495598316192627,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_ShortSpearCombo_Unique1": {
+    "seconds": 2.5199999809265137,
+    "rate": 1.0,
+    "hits": 4,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.8533333539962769,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.6666666269302368,
+        "hits": 3
+      }
+    ]
+  },
+  "AM_Player_GauntletsCombo_V2_Unique1": {
+    "seconds": 5.5555500984191895,
+    "rate": 1.0,
+    "hits": 6,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.8518519401550293,
+        "hits": 2
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.9259259700775146,
+        "hits": 2
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.7777721881866455,
+        "hits": 2
+      }
+    ]
+  },
+  "AM_Player_2H_Heavy_WarHammerCombo": {
+    "seconds": 1.2166666984558105,
+    "rate": 1.0,
+    "hits": 1,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.2166666984558105,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_UnarmedCombo": {
+    "seconds": 4.083333492279053,
+    "rate": 1.0,
+    "hits": 4,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 2.0834062099456787,
+        "hits": 2
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.999927282333374,
+        "hits": 2
+      }
+    ]
+  },
+  "AM_Player_ClawsCombo": {
+    "seconds": 4.566649913787842,
+    "rate": 1.0,
+    "hits": 6,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.1612474918365479,
+        "hits": 2
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.4720861911773682,
+        "hits": 2
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.9333162307739258,
+        "hits": 2
+      }
+    ]
+  },
+  "AM_Player_CleaverCombo": {
+    "seconds": 2.4089667797088623,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7564042806625366,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.6525651216506958,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 0.9999973773956299,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_AxeCombo_Unique1": {
+    "seconds": 2.6165332794189453,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.8333336710929871,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.7165327668190002,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.066666841506958,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_StraightSwordCombo_Unique1": {
+    "seconds": 4.233333110809326,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.1333333253860474,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.368792176246643,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.7312076091766357,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_ClaymoreCombo_Unique1": {
+    "seconds": 3.447849988937378,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.947975218296051,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.0771633982658386,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.4227113723754883,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_DaggersCombo": {
+    "seconds": 3.7666666507720947,
+    "rate": 1.0,
+    "hits": 6,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.1689316034317017,
+        "hits": 2
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.3996280431747437,
+        "hits": 2
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.1981070041656494,
+        "hits": 2
+      }
+    ]
+  },
+  "AM_Player_RapierCombo_Unique1": {
+    "seconds": 4.766666889190674,
+    "rate": 1.0,
+    "hits": 7,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.4666666984558105,
+        "hits": 3
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.566666603088379,
+        "hits": 3
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.7333335876464844,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_GiantClubCombo": {
+    "seconds": 1.535949945449829,
+    "rate": 1.0,
+    "hits": 1,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.535949945449829,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_GlaiveCombo": {
+    "seconds": 3.1502833366394043,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.0260908603668213,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.1241967678070068,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 0.9999957084655762,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_SwordCombo": {
+    "seconds": 2.5244333744049072,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7818166613578796,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.716533362865448,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.0260833501815796,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_GauntletsCombo_V2": {
+    "seconds": 5.5555500984191895,
+    "rate": 1.0,
+    "hits": 6,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.8518519401550293,
+        "hits": 2
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.9259259700775146,
+        "hits": 2
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.7777721881866455,
+        "hits": 2
+      }
+    ]
+  },
+  "AM_Player_CurvedGreatswordCombo": {
+    "seconds": 3.459733247756958,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.006134033203125,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.0370256900787354,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.4165735244750977,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_ShovelCombo_Unique1": {
+    "seconds": 4.733316898345947,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.1666500568389893,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 2.5,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.066666841506958,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_DaggersCombo_Unique1": {
+    "seconds": 3.7666666507720947,
+    "rate": 1.0,
+    "hits": 6,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.1689316034317017,
+        "hits": 2
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.3996280431747437,
+        "hits": 2
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.1981070041656494,
+        "hits": 2
+      }
+    ]
+  },
+  "AM_Player_MaceCombo": {
+    "seconds": 2.831683397293091,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7818166613578796,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.716533362865448,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.3333333730697632,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_BattlestaffCombo_Unique1": {
+    "seconds": 3.9666666984558105,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.1666667461395264,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.2999999523162842,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.5,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_GreatswordCombo_Unique1": {
+    "seconds": 1.6909500360488892,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack2",
+        "seconds": 1.6909500360488892,
+        "hits": 3
+      }
+    ]
+  },
+  "AM_Player_ShovelCombo": {
+    "seconds": 4.733316898345947,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.1666500568389893,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 2.5,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.066666841506958,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_2H_Heavy_WarHammerCombo_Unique1": {
+    "seconds": 1.2166666984558105,
+    "rate": 1.0,
+    "hits": 1,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.2166666984558105,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_SabreCombo1_Unique1": {
+    "seconds": 2.4937334060668945,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7818166613578796,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.716533362865448,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 0.9953833818435669,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_DaggerCombo": {
+    "seconds": 0.8098000288009644,
+    "rate": 1.0,
+    "hits": 1,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.8098000288009644,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_MoonSwordCombo": {
+    "seconds": 2.4131834506988525,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 0.7818166613578796,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 0.716533362865448,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 0.9148334264755249,
+        "hits": 1
+      }
+    ]
+  },
+  "AM_Player_ScytheCombo_Unique1": {
+    "seconds": 3.496983289718628,
+    "rate": 1.0,
+    "hits": 3,
+    "sections": [
+      {
+        "name": "Attack1",
+        "seconds": 1.073304295539856,
+        "hits": 1
+      },
+      {
+        "name": "Attack2",
+        "seconds": 1.1807397603988647,
+        "hits": 1
+      },
+      {
+        "name": "Attack3",
+        "seconds": 1.2429392337799072,
+        "hits": 1
+      }
+    ]
+  }
+}

@@ -4,7 +4,7 @@ from live_game_stats import GameReader
 from weapon_data import bank
 
 ROOT=pathlib.Path(__file__).resolve().parent
-from mod_manager import STATE, game, EXPECTED, worker_command,worker_environment
+from mod_manager import STATE, game, EXPECTED, SUPPORTED, worker_command,worker_environment
 RECORD=STATE/'adapter-session.json'
 META=json.loads((ROOT/'assets/estimate_hook.json').read_text())
 TEMPLATE=(ROOT/'assets/estimate_hook.bin').read_bytes()
@@ -33,9 +33,10 @@ class Writer:
   if not self.k.FlushInstructionCache(self.handle,p,size):raise ctypes.WinError(ctypes.get_last_error())
  def close(self):self.k.CloseHandle(self.handle)
 
-def patched(base,control):
+def patched(base,control,layout=None):
  code=bytearray(TEMPLATE)
- targets={'control':control,'convert':base+0x3e78e00,'handler':base+0x6659710,'font_copy':base+0x17863d0,'font_set':base+0x36f4720}
+ layout=layout or {'convert':0x3e78e00,'handler':0x6659710,'font_copy':0x17863d0,'font_set':0x36f4720}
+ targets={'control':control,**{n:base+layout[n] for n in ('convert','handler','font_copy','font_set')}}
  for name,offset in META['patches'].items():struct.pack_into('<Q',code,offset,targets[name])
  return bytes(code)
 
@@ -80,7 +81,7 @@ def find_handler(reader):
    param=reader.q(reader.q(fn+0x50)+8)
    functions[cstring(reader,param+0x10)]=fn
  if set(functions)!={'FAS_TooltipState','FText'}:raise ValueError('Unexpected stat overloads.')
- if reader.q(functions['FText']+0x140)!=reader.base+0x6659710:raise ValueError('Unexpected text handler.')
+ if reader.q(functions['FText']+0x140)!=reader.base+reader.layout['handler']:raise ValueError('Unexpected text handler.')
  return cl,functions['FAS_TooltipState'],functions['FText']
 
 def seed(writer,reader,control,destination):
@@ -99,16 +100,16 @@ def install(game):
   previous=json.loads(RECORD.read_text(encoding='utf-8-sig')) if RECORD.exists() else None
   if previous and valid(reader,previous) and previous.get('version')==2 and previous.get('revision')==META['revision']:return previous
   cl,state,text=find_handler(reader)
-  current=reader.read(state+0x130,24);original=struct.pack('<3Q',*((reader.base+0x45c32b0,)*3))
+  current=reader.read(state+0x130,24);original=struct.pack('<3Q',*((reader.base+reader.layout['state_handler'],)*3))
   if current!=original and not (previous and valid(reader,previous) and int(previous['state_function'],16)==state):raise ValueError('Another adapter is active. No code was changed.')
-  if reader.read(reader.base+0x3e78e00,12)!=bytes.fromhex('40534883ec30488b02488bd9'):raise ValueError('Text constructor changed.')
-  if reader.read(reader.base+0x17863d0,10)!=bytes.fromhex('48895c2408574883ec20') or reader.read(reader.base+0x36f4720,10)!=bytes.fromhex('48895c240848896c2410'):raise ValueError('Font functions changed.')
+  if reader.read(reader.base+reader.layout['convert'],12)!=bytes.fromhex('40534883ec30488b02488bd9'):raise ValueError('Text constructor changed.')
+  if reader.read(reader.base+reader.layout['font_copy'],10)!=bytes.fromhex('48895c2408574883ec20') or reader.read(reader.base+reader.layout['font_set'],10)!=bytes.fromhex('48895c240848896c2410'):raise ValueError('Font functions changed.')
   remote=writer.allocate(4096);control=writer.allocate(65536)
-  code=patched(reader.base,control)
+  code=patched(reader.base,control,reader.layout)
   if code[16]!=0x53:raise ValueError('Invalid native adapter entry.')
   seed(writer,reader,control,control+0x1000)
   writer.write(remote,code);writer.executable(remote,4096)
-  record={'pid':game['pid'],'image_base':hex(reader.base),'class':hex(cl),'state_function':hex(state),'text_function':hex(text),'native_text_handler':hex(reader.base+0x6659710),'adapter':hex(remote),'control':hex(control),'version':2,'revision':META['revision'],'code_length':len(code),'code_sha256':hashlib.sha256(code).hexdigest(),'original_bytes':original.hex(),'rollback_bytes':current.hex(),'applied':True}
+  record={'pid':game['pid'],'image_base':hex(reader.base),'class':hex(cl),'state_function':hex(state),'text_function':hex(text),'native_text_handler':hex(reader.base+reader.layout['handler']),'adapter':hex(remote),'control':hex(control),'version':2,'revision':META['revision'],'code_length':len(code),'code_sha256':hashlib.sha256(code).hexdigest(),'original_bytes':original.hex(),'rollback_bytes':current.hex(),'applied':True}
   if reader.read(state+0x130,24)!=current:raise ValueError('The handler changed during preparation.')
   writer.write(state+0x130,struct.pack('<3Q',*entries(record)))
   if not valid(reader,record):
@@ -154,7 +155,7 @@ def main():
  active_game=game()
  if not active_game:raise ValueError('Start Minecraft Dungeons II through Steam first.')
  with pathlib.Path(active_game['path']).open('rb') as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
- if digest!=EXPECTED:raise ValueError('Game version changed. No adapter was installed.')
+ if digest not in SUPPORTED:raise ValueError('Game version changed. No adapter was installed.')
  result=install(active_game);start_updater();print(json.dumps(result,indent=2))
 
 if __name__=='__main__':

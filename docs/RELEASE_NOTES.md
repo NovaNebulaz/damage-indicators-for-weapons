@@ -1,11 +1,14 @@
-Portable launcher and inventory weapon damage estimates for the verified Windows Steam build of Minecraft Dungeons II.
+# Damage Indicators for weapons 1.1.0
 
-**Download:** choose `Damage Indicators for weapons.exe` for the launcher alone, or extract `Damage Indicators for weapons.zip` for the launcher and full project. Python is not required for either portable download.
 
-Close the game for first setup, open the launcher, and press **Install & Play**. Open your character and inventory when prompted. To uninstall, close the game and press **Remove mod**.
 
-Includes automatic Steam-library discovery, current loadout boosts, quick and charged ranged estimates, conditional damage lines, file backups, and startup retries while the game loads.
+Restores weapon estimates after the latest Steam update and adds a Speed: 1–10 line to weapon tooltips. Current attack-speed boosts affect the rating. Ratings compare weapons within melee or ranged categories; they are nominal timing estimates, not measured attacks per second.
 
-**Compatibility:** Steam on Windows 10/11 x64, using the executable hash documented in the repository. Minecraft Launcher, Microsoft Store, Xbox app, and other builds need separate verified adapters and are not supported by this release.
 
-Manual file locations, source builds, limitations, and troubleshooting are covered in the repository's `docs` folder. `SHA256.txt` lists the two download hashes.
+
+Download the EXE and run it from any folder, then choose Install & Play. If you already installed the mod, this launcher updates the runtime adapter when the game starts. The ZIP contains the same launcher, source and instructions. Use Remove mod to uninstall.
+
+
+
+Verified on the October 1 Steam executable. Non-Steam editions remain untested. See docs/COMPATIBILITY.md for supported hashes and the speed calculation.
+

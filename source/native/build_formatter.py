@@ -155,6 +155,15 @@ volley:
  mov eax,[r14+40]
  call append_number
 footnote:
+ cmp dword ptr [r14+44],0
+ je speed_done
+ lea rsi,[rip+speed_label]
+ call append_text
+ mov eax,[r14+44]
+ call append_number
+ lea rsi,[rip+speed_suffix]
+ call append_text
+speed_done:
  lea rsi,[rip+neutral_label]
  call append_text
 render:
@@ -263,6 +272,10 @@ full_charged_label:
  {words(chr(10)+'Full HP charged ')}
 projectile_label:
  {words(chr(10)+'Per projectile; count ')}
+speed_label:
+ {words(chr(10)+'Speed: ')}
+speed_suffix:
+ {words('/10')}
 neutral_label:
  {words(chr(10)+'Current boosts; neutral target')}
  .align 8
@@ -278,6 +291,6 @@ patches={}
 for name,value in [('control',CONTROL),('convert',CONVERT),('handler',HANDLER),('font_copy',FONT_COPY),('font_set',FONT_SET)]:
  needle=struct.pack('<Q',value);assert binary.count(needle)==1;patches[name]=binary.index(needle)
 ROOT.joinpath('estimate_hook.bin').write_bytes(binary)
-ROOT.joinpath('estimate_hook.json').write_text(json.dumps({'patches':patches,'raw_offset':16,'vm_offset':0,'version':2,'revision':7},indent=2))
+ROOT.joinpath('estimate_hook.json').write_text(json.dumps({'patches':patches,'raw_offset':16,'vm_offset':0,'version':2,'revision':9},indent=2))
 pathlib.Path(__file__).with_name('formatter.asm').write_text(source)
 print('Built definition-based formatter',len(binary),'bytes',patches)

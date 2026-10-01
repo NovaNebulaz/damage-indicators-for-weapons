@@ -46,5 +46,5 @@ jobs:
           if ($env:REF_TYPE -eq 'tag' -and $env:REF_NAME -ne $releaseTag) { throw 'Tag and product version differ.' }
           gh release view $releaseTag 2>$null
           if ($LASTEXITCODE -eq 0) { Write-Output 'This version is already published; existing downloads are unchanged.'; exit 0 }
-          gh release create $releaseTag 'dist/Damage Indicators for weapons.exe' 'dist/Damage Indicators for weapons.zip' 'dist/SHA256.txt' --target $env:GITHUB_SHA --title "Damage Indicators for weapons $releaseTag" --notes-file docs/RELEASE_NOTES.md --latest
+          gh release create $releaseTag 'dist/Damage.Indicators.for.weapons.exe' 'dist/Damage.Indicators.for.weapons.zip' 'dist/SHA256.txt' --target $env:GITHUB_SHA --title "Damage Indicators for weapons $releaseTag" --notes-file docs/RELEASE_NOTES.md --latest
           if ($LASTEXITCODE -ne 0) { throw 'Release publication failed.' }

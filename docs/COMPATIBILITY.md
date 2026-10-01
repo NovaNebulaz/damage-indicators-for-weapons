@@ -8,10 +8,11 @@ This mod is for **Minecraft Dungeons II**, not the original Minecraft Dungeons.
 - Steam app ID: `1912410`.
 - Executable: `Dungeons\Binaries\Win64\Dungeons-Win64-Shipping.exe`.
 - Tested locally on September 30 and October 1, 2026.
-- Supported executable SHA-256:
+- Supported executable SHA-256 values:
 
 ```text
 7c83afbf0ad34a40b853cdb25a22fffb605d08e2a1e2d431974d7c7c1ee0ba54
+231147bd0c655a4ae73f90873675d42917f2bfb3a9ee164fc64f217d6d6bd4ef
 ```
 
 Steam editions with different DLC purchases are not separate supported builds by themselves. What matters is the executable and runtime layout. The launcher verifies the executable hash before installation and checks the live tooltip and player-stat layouts before enabling estimates.
@@ -41,3 +42,9 @@ A supported port needs more than a new install path:
 The current Steam references are in `source/inventory_estimates.py` and `source/live_game_stats.py`. The formatter is under `source/native`, and the ordinary-hit model is in `source/combat_model.py`.
 
 To request a port, open an issue with the edition, visible game version, Windows version, and the exact message you received. Do not upload the game executable, saves, account information, or a full game archive.
+
+## Weapon speed
+
+Speed runs from 1 (slow) to 10 (fast), compared within melee or ranged weapons. Melee uses the complete combo animation duration, number of hit events, animation rate, variant speed multipliers and cooldowns. Ranged uses its firing interval, plus charge time where charging is required. Your current melee or ranged attack-speed boost affects the rating.
+
+This is a nominal timing estimate, not measured attacks per second. Multi-hit combo steps count as multiple strikes. Animation cancelling, recovery windows, movement, volleys and charge choices can change actual cadence. A melee 10 and a ranged 10 are not the same firing rate. Damage estimates still describe a neutral target, with conditional critical and full-health damage listed separately.
